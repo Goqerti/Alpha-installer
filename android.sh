@@ -1,43 +1,27 @@
-ALPHA="\n🐺 A U T O / A L P H A / Q U R U L U M 🐺"
-ALPHA+="\n "
-ALPHA+="\n🐺 Çox funksiyalı Azərbaycan User Bot'u 🌹"
-ALPHA+="\n🌹Bizi Seçdiyiniz üçün təşəkkür edirik 🌹"
-ALPHA+="\n "
-ALPHA+="\n😻 Yeniliklər Kanalı: @AlphaUserBot"
-ALPHA+="\n✅ Dəstək qrupumuz: @Alphasupportaz"
-ALPHA+="\n⚡ Plugin kanalımız: @Alphapluginaz"
-ALPHA+="\n "
-BOSLUQ="\n "
-echo -e $ALPHA
-echo -e $BOSLUQ
-echo "✅ Bir sıra termux tənzimlənmələri gedir..."
-echo -e $BOSLUQ
-pkg update -y && pkg upgrade
+MESAJ="🐺 ALPHA / AUTO / QURULUM 🐺"
+MESAJ="Dəstək: t.me/alphasupportaz ✅"
+MESAJ="Bizi seçdiyiniz üçün təşəkkürlər🌹"
+pkg update -y
 clear
-echo -e $ALPHA
-echo -e $BOSLUQ
-echo "⚡ Python Qurulur....."
-echo -e $BOSLUQ
-pkg install python3
-pip3 install --upgrade pip
-cle
-echo -e $ALPHA
-echo -e $BOSLUQ
-echo "✅ Github quraşdırılır..."
-echo -e $BOSLUQ
+echo -e $MESAJ
+echo "Python yüklənir...✅"
+pkg install python -y
+clear
+echo -e $MESAJ
+echo "Git Yüklənir....✅"
 pkg install git -y
-rm -rf alphaqurulum
 clear
-echo -e $ALPHA
-echo -e $BOSLUQ
-echo "🐺 ALPHA Userbot Yüklənir 🐺"
-echo -e $BOSLUQ
+echo -e $MESAJ
+echo "TeleThon Yüklənir.....✅"
+pip install telethon
+echo "Son addımlar"
 git clone https://github.com/goqerti/alphaqurulum
 clear
-echo -e $ALPHA
-echo -e $BOSLUQ
-echo "✅ Kiçik həcimli fayıllar yüklənir...."
-echo -e $BOSLUQ
+echo -e $MESAJ
 cd alphaqurulum
-pip3 install -U -r requirements.txt
-python3 -m alphaqurulum
+clear
+echo "Son tənzimlənmələr⚡..."
+echo -e $MESAJ
+pip install wheel
+pip install -r requirements.txt
+python3 -m alpha_installer
